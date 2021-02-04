@@ -1,6 +1,12 @@
 {
   "name": "toolkit",
+  "description": "The ultimate toolkit for frontend developers",
   "version": "0.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevbesset/toolkit.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build"
