@@ -1,5 +1,13 @@
+@import "variables";
+
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-size: var(--default-font-size);
+  color: var(--default-color);
+  background-color: var(--default-background-color);
 }
 
 * {
