@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BaseHeader from "./BaseHeader.vue";
+import BaseHeader from "../components/BaseHeader.vue";
 export default {
   name: "DefaultLayout",
   components: { BaseHeader },
@@ -19,6 +19,7 @@ export default {
 .default-layout {
   display: flex;
   min-height: 100vh;
+  flex-direction: column;
 
   &__wrapper {
     position: relative;
@@ -26,8 +27,6 @@ export default {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--content-background-color);
-    padding: 2.5em 1.5em;
   }
 }
 </style>

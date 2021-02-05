@@ -8,7 +8,7 @@
   </DefaultLayout>
 </template>
 <script>
-import DefaultLayout from "./components/layouts/DefaultLayout.vue";
+import DefaultLayout from "./layouts/DefaultLayout.vue";
 
 export default {
   components: { DefaultLayout },
