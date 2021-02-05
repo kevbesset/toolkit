@@ -27,7 +27,6 @@ export default {
     display: flex;
     flex-direction: column;
     background-color: var(--content-background-color);
-    border-radius: 2em;
     padding: 2.5em 1.5em;
   }
 }
