@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",
+    "normalize.css": "^8.0.1",
     "prettier": "^2.2.1",
     "sass": "^1.32.6",
     "vite": "^1.0.0-rc.13"
