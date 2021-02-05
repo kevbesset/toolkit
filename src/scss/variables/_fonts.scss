@@ -1,3 +1,25 @@
 :root {
   --default-font-size: 16px;
 }
+
+$font-montserrat: "Montserrat";
+@font-face {
+  font-family: $font-montserrat;
+  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-montserrat;
+  src: url("../../assets/fonts/Montserrat/Montserrat-SemiBold.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: $font-montserrat;
+  src: url("../../assets/fonts/Montserrat/Montserrat-Black.ttf")
+    format("truetype");
+  font-weight: 900;
+}
