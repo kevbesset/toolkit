@@ -19,7 +19,6 @@ export default {
 .default-layout {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
 
   &__wrapper {
     position: relative;

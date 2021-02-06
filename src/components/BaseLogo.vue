@@ -1,22 +1,19 @@
 <template>
-  <div class="logo">Tool<strong class="logo__important">Kit</strong></div>
+  <BaseButton :to="{ name: RouteName.HOME }" primary square class="logo">
+    tk
+  </BaseButton>
 </template>
 
 <script>
+import BaseButton from "./BaseButton.vue";
+import RouteName from "../config/RouteName";
 export default {
   name: "BaseLogo",
+  components: { BaseButton },
+  data() {
+    return {
+      RouteName,
+    };
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.logo {
-  font-weight: bold;
-  color: var(--default-color);
-  letter-spacing: -0.075em;
-  font-size: 1.25em;
-
-  &__important {
-    color: var(--primary-color);
-  }
-}
-</style>
