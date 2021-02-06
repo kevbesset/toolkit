@@ -1,22 +1,25 @@
 <template>
-  <div class="default-layout">
-    <BaseHeader />
-    <RouterView v-slot="{ Component }">
-      <transition name="default-layout-" mode="out-in">
-        <BasePage :key="Component" class="default-layout__wrapper">
-          <component :is="Component" />
-        </BasePage>
-      </transition>
-    </RouterView>
-  </div>
+  <FlashProvider>
+    <div class="default-layout">
+      <BaseHeader />
+      <RouterView v-slot="{ Component }">
+        <transition name="default-layout-" mode="out-in">
+          <BasePage :key="Component" class="default-layout__wrapper">
+            <component :is="Component" />
+          </BasePage>
+        </transition>
+      </RouterView>
+    </div>
+  </FlashProvider>
 </template>
 
 <script>
 import BaseHeader from "../components/BaseHeader.vue";
 import BasePage from "../components/page/BasePage.vue";
+import FlashProvider from "../components/flash/FlashProvider.vue";
 export default {
   name: "DefaultLayout",
-  components: { BasePage, BaseHeader },
+  components: { FlashProvider, BasePage, BaseHeader },
 };
 </script>
 

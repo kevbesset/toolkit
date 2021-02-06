@@ -94,7 +94,7 @@ export default {
   cursor: pointer;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
-  border: inherit;
+  border: 0;
   background: inherit;
   border-radius: 0.375em;
   transition: all var(--default-transition-duration);

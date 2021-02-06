@@ -13,9 +13,11 @@ import PageSubtitle from "../components/page/PageSubtitle.vue";
 import PxForm from "../components/modules/px/PxForm.vue";
 import { copy } from "../utils/clipboard";
 import { convert } from "../utils/pxConverter";
+import FlashType from "../config/FlashType";
 export default {
   name: "PxConverter",
   components: { PxForm, PageSubtitle, PageTitle },
+  inject: ["flash"],
   data() {
     return {
       sizeList: [],
@@ -29,8 +31,10 @@ export default {
         this.sizeList.sort((a, b) => a - b);
       }
 
-      copy(`${convert(size, base)}em`).then(() => {
+      const em = `${convert(size, base)}em`;
+      copy(em).then(() => {
         // successfully added to board
+        this.flash(`${em} copied`, FlashType.SUCCESS);
       });
     },
   },
