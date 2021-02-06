@@ -19,4 +19,8 @@ body {
     // This allow easy override and may avoid conflicts with external content
     box-sizing: inherit;
   }
+
+  &:focus {
+    outline-color: var(--primary-color);
+  }
 }

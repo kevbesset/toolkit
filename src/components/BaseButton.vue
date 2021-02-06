@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export const ButtonType = Object.freeze({
+const ButtonType = Object.freeze({
   BUTTON: "button",
   SUBMIT: "submit",
   LINK: "a",
@@ -28,6 +28,7 @@ export default {
     disabled: Boolean,
     square: Boolean,
     primary: Boolean,
+    reversePrimary: Boolean,
   },
   computed: {
     typeAttr() {
@@ -56,6 +57,7 @@ export default {
           [`${BLOCK_SELECTOR}--disabled`]: this.disabled,
           [`${BLOCK_SELECTOR}--square`]: this.square,
           [`${BLOCK_SELECTOR}--primary`]: this.primary,
+          [`${BLOCK_SELECTOR}--reverse-primary`]: this.reversePrimary,
         },
       ];
     },
@@ -66,7 +68,7 @@ export default {
         class: this.classList,
         href: this.href,
         to: this.to,
-        disabled: this.disabled,
+        disabled: this.disabled || null,
       };
     },
   },
@@ -94,13 +96,17 @@ export default {
   -webkit-tap-highlight-color: transparent;
   border: inherit;
   background: inherit;
-  border-radius: 0.5em;
+  border-radius: 0.375em;
   transition: all var(--default-transition-duration);
 
   &--primary {
     background-color: var(--primary-color);
     color: var(--reverse-primary-color);
-    font-weight: bold;
+  }
+
+  &--reverse-primary {
+    background-color: var(--reverse-primary-color);
+    color: var(--primary-color);
   }
 
   &--square {

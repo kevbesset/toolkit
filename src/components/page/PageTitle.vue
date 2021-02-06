@@ -17,7 +17,7 @@ export default {
 .page-title {
   font-weight: bold;
   font-size: 1.5em;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.25em;
   color: var(--important-text-color);
 }
 </style>
