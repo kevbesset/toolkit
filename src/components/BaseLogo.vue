@@ -17,3 +17,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.logo {
+  box-shadow: 0 0 0.75em 0.01em var(--primary-color);
+}
+</style>

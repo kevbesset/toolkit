@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 5em;
-  background-color: var(--secondary-background-color);
+  background-color: var(--important-background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

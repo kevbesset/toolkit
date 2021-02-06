@@ -95,12 +95,11 @@ export default {
   border: inherit;
   background: inherit;
   border-radius: 0.5em;
-  transition: all 150ms;
+  transition: all var(--default-transition-duration);
 
   &--primary {
     background-color: var(--primary-color);
     color: var(--reverse-primary-color);
-    box-shadow: 0 0 0.75em 0.01em var(--primary-color);
     font-weight: bold;
   }
 

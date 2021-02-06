@@ -35,10 +35,10 @@ export default {
   width: 100%;
   border-radius: 0;
   border-right: 2px solid transparent;
+  color: var(--important-text-color);
 
   &--active {
     color: var(--primary-color);
-    text-shadow: 0 0 1.25em var(--primary-color);
     border-color: var(--primary-color);
   }
 }
