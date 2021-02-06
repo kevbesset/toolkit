@@ -1,7 +1,7 @@
 <template>
   <FlashProvider>
     <div class="default-layout">
-      <BaseHeader />
+      <BaseHeader class="default-layout__header" />
       <RouterView v-slot="{ Component }">
         <transition name="default-layout-" mode="out-in">
           <BasePage :key="Component" class="default-layout__wrapper">
@@ -25,7 +25,6 @@ export default {
 
 <style lang="scss" scoped>
 .default-layout {
-  display: flex;
   min-height: 100vh;
 
   &--enter-active,
@@ -43,12 +42,16 @@ export default {
     opacity: 1;
   }
 
+  &__header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
   &__wrapper {
     position: relative;
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
+    margin-left: 5em;
+    width: calc(100% - 5em);
   }
 }
 </style>

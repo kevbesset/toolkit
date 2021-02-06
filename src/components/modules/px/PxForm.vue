@@ -15,6 +15,7 @@
     </FormInput>
     <BaseButton primary type="submit" class="f-px__submit">Send</BaseButton>
   </BaseCard>
+  <slot v-bind="{ base }" />
 </template>
 
 <script>
@@ -28,6 +29,7 @@ export default {
   props: {
     sizeList: { type: Array, required: true },
   },
+  emits: ["newSize"],
   data() {
     return {
       newSize: null,
@@ -45,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .f-px {
-  display: flex;
+  display: inline-flex;
   align-items: flex-end;
   justify-content: space-between;
 

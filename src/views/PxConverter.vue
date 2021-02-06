@@ -1,26 +1,29 @@
 <template>
   <PageTitle>Pixel converter</PageTitle>
   <PageSubtitle>Px to Em conversion made simple</PageSubtitle>
-  <header class="px-converter__header">
-    <PxForm :size-list="sizeList" @newSize="handleSubmit" />
-  </header>
-  <pre>{{ sizeList }}</pre>
+  <PxForm :size-list="sizeList" @newSize="handleSubmit">
+    <template #default="{ base }">
+      <PxList :base="base" :sizes="sizeList" />
+    </template>
+  </PxForm>
 </template>
 
 <script>
 import PageTitle from "../components/page/PageTitle.vue";
 import PageSubtitle from "../components/page/PageSubtitle.vue";
 import PxForm from "../components/modules/px/PxForm.vue";
+import PxList from "../components/modules/px/PxList.vue";
 import { copy } from "../utils/clipboard";
-import { convert } from "../utils/pxConverter";
+import { convert, defaultSizes } from "../utils/pxConverter";
 import FlashType from "../config/FlashType";
+
 export default {
   name: "PxConverter",
-  components: { PxForm, PageSubtitle, PageTitle },
+  components: { PxList, PxForm, PageSubtitle, PageTitle },
   inject: ["flash"],
   data() {
     return {
-      sizeList: [],
+      sizeList: defaultSizes(),
     };
   },
   methods: {
@@ -43,9 +46,5 @@ export default {
 
 <style lang="scss" scoped>
 .px-converter {
-  &__header {
-    display: flex;
-    justify-content: flex-start;
-  }
 }
 </style>
